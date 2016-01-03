@@ -31,7 +31,7 @@ public class main {
 
 		int numPlayers = 2;
 		Player[] players = new Player[numPlayers];
-		players[0]=new Player("prvi",false,false,true);
+		players[0]=new Player("prvi",false,false,false);
 		players[1]=new Player("drugi",false,true,false);
 		//players[2]=new Player("tretji",true,false,false);
 		//players[3]=new Player("cetrti",false,true,false);
@@ -49,11 +49,11 @@ public class main {
 		*/
 		
 		//players[0].setQmemory((HashMap) deserialize("prvi.ser"));
-		players[1].setQmemory((HashMap) deserialize("drugi.ser"));
+		//players[1].setQmemory((HashMap) deserialize("drugi.ser"));
 		
 		
 		
-		int numRounds=10;
+		int numRounds=100000;
 		Deck deck = new Deck();
 		
 		for(int r=0;r<numRounds;r++){
@@ -110,7 +110,7 @@ public class main {
 		for(Player p : players){
 			
 			//to output string to file
-			
+			/*
 			PrintWriter out1;
 			try {
 				out1 = new PrintWriter("mem1_"+p.name+".txt");
@@ -121,17 +121,17 @@ public class main {
 				e.printStackTrace();
 			}
 			 
-			
+			*/
 			
 			//to serialize memory into file
-			
+			/*
 			if(!p.Qmemory.isEmpty()){
 				System.out.println("serialize "+p.name+" into file? true/false");
 				Scanner scan = new Scanner(System.in);
 				if(scan.nextBoolean()==true)
 					serialize(p.Qmemory,p.name);
 			}
-			
+			*/
 		}
 
 		
